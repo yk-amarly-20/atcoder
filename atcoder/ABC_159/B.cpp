@@ -3,6 +3,8 @@ using namespace std;
 
 string s;
 
+bool is_palindrome(string txt);
+
 int main() {
   cin >> s;
 
@@ -33,8 +35,8 @@ int main() {
 bool is_palindrome(string txt) {
   // 回文かチェック
   string r_txt;
-  txt.copy(r_txt, 0);
-  reverse(r_txt);
+  r_txt = txt;
+  reverse(r_txt.begin(), r_txt.end());
   if (txt == r_txt) {
     return true;
   } else {
