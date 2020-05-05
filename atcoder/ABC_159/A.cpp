@@ -1,16 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int n, k;
+int n, m;
+int ans;
 
 int main() {
-  cin >> n >> k;
+  cin >> n >> m;
 
-  int ans = 0;
-  while(n) {
-    n /= k;
-    ans++;
-  }
+  ans = n * (n - 1) / 2 + m * (m - 1) / 2;
 
   printf("%d", ans);
 
